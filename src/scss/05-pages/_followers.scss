@@ -1,8 +1,19 @@
 %card-item {
-  height: 215px;
+  position: relative;
+  height: 220px;
   padding: 1.5rem 0;
-  border-top: 4px solid transparent;
+  border-radius: 5px;
   text-align: center;
+  overflow: hidden;
+}
+
+%card-item-top-color {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
 }
 
 .followers {
@@ -36,21 +47,37 @@
 
   &__card-fb {
     @extend %card-item;
-    border-top-color: var(--facebook);
+  }
+
+  &__card-fb::before {
+    @extend %card-item-top-color;
+    background-color: var(--facebook);
   }
 
   &__card-tw {
     @extend %card-item;
-    border-top-color: var(--twitter);
+  }
+
+  &__card-tw::before {
+    @extend %card-item-top-color;
+    background-color: var(--twitter);
   }
 
   &__card-ig {
     @extend %card-item;
-    border-top-color: var(--instagram);
+  }
+
+  &__card-ig::before {
+    @extend %card-item-top-color;
+    background-image: var(--instagram);
   }
 
   &__card-yt {
     @extend %card-item;
-    border-top-color: var(--youtube);
+  }
+
+  &__card-yt::before {
+    @extend %card-item-top-color;
+    background-color: var(--youtube);
   }
 }
