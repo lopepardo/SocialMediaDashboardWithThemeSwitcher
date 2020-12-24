@@ -1,0 +1,35 @@
+.summary__cards {
+  row-gap: 1rem;
+}
+
+.summary {
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__card {
+    padding: 1.6rem 1.5rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content:first-child {
+    margin-bottom: 1.2rem;
+  }
+
+  &__content:last-child {
+    align-items: flex-end;
+  }
+
+  &__text {
+    color: var(--text-color-secondary);
+  }
+
+  &__number {
+    font-size: 2rem;
+  }
+}

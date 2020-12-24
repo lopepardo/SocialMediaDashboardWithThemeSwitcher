@@ -1,0 +1,56 @@
+%card-item {
+  height: 215px;
+  padding: 1.5rem 0;
+  border-top: 4px solid transparent;
+  text-align: center;
+}
+
+.followers {
+  margin-bottom: 3rem;
+  @include media(0, $max-md) {
+    row-gap: 1.5rem;
+  }
+
+  &__user {
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__number {
+    font-size: 3.5rem;
+  }
+
+  &__username {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+  }
+
+  &__text {
+    margin-bottom: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: var(--text-color-secondary);
+  }
+
+  &__card-fb {
+    @extend %card-item;
+    border-top-color: var(--facebook);
+  }
+
+  &__card-tw {
+    @extend %card-item;
+    border-top-color: var(--twitter);
+  }
+
+  &__card-ig {
+    @extend %card-item;
+    border-top-color: var(--instagram);
+  }
+
+  &__card-yt {
+    @extend %card-item;
+    border-top-color: var(--youtube);
+  }
+}

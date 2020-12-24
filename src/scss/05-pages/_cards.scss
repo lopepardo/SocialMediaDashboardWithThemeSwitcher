@@ -1,0 +1,32 @@
+.cards {
+  display: grid;
+  @include media(0, $max-sm) {
+    grid-template-columns: 1fr;
+  }
+  @include media($min-md, $max-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media($min-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media($min-md) {
+    column-gap: 2rem;
+  }
+
+  &__bg {
+    background-color: var(--card-background);
+    border-radius: 4px;
+    @include media($min-lg) {
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+
+  &__bg:hover {
+    @include media($min-lg) {
+      background-color: var(--card-background-hover);
+      transform: translateY(-5px);
+    }
+  }
+}

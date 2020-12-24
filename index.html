@@ -1,87 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Dark Mode Challenge</title>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <div class="l-grid">
+      <main class="l-limit">
+        <header class="header">
+          <div class="header__content">
+            <h1 class="header__title">Social Media Dashboard</h1>
+            <span class="header__text">Total Followers: 23,004</span>
+          </div>
 
-  Dark Mode
+          <div class="header__toggle">
+            <span class="header__span">Dark Mode</span>
+            <div class="toggle">
+              <input
+                class="toggle__input"
+                type="checkbox"
+                id="switch"
+                name="theme"
+              />
+              <label class="toggle__label" for="switch">Toggle</label>
+            </div>
+          </div>
+        </header>
 
-  
+        <section class="cards followers">
+          <div class="cards__bg followers__card-fb">
+            <div class="followers__user">
+              <img
+                src="src/images/icon-facebook.svg"
+                alt=""
+                srcset=""
+                class="followers__logo"
+              />
+              <span class="followers__username">@lopepardo</span>
+            </div>
+            <h3 class="followers__number">1987</h3>
+            <p class="followers__text">Followers</p>
+            <div class="ratio ratio--up">
+              <img src="src/images/icon-up.svg" alt="" srcset="" />
+              <span> 12 Today </span>
+            </div>
+          </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+          <div class="cards__bg followers__card-tw">
+            <div class="followers__user">
+              <img
+                src="src/images/icon-twitter.svg"
+                alt=""
+                srcset=""
+                class="followers__logo"
+              />
+              <span class="followers__username">@lopepardo</span>
+            </div>
+            <h3 class="followers__number">1044</h3>
+            <p class="followers__text">Followers</p>
+            <div class="ratio ratio--up">
+              <img src="src/images/icon-up.svg" alt="" srcset="" />
+              <span> 99 Today </span>
+            </div>
+          </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+          <div class="cards__bg followers__card-ig">
+            <div class="followers__user">
+              <img
+                src="src/images/icon-instagram.svg"
+                alt=""
+                srcset=""
+                class="followers__logo"
+              />
+              <span class="followers__username">@lopepardo</span>
+            </div>
+            <h3 class="followers__number">11k</h3>
+            <p class="followers__text">Followers</p>
+            <div class="ratio ratio--up">
+              <img src="src/images/icon-up.svg" alt="" srcset="" />
+              <span> 1099 Today </span>
+            </div>
+          </div>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+          <div class="cards__bg followers__card-yt">
+            <div class="followers__user">
+              <img
+                src="src/images/icon-youtube.svg"
+                alt=""
+                srcset=""
+                class="followers__logo"
+              />
+              <span class="followers__username">Felipe López</span>
+            </div>
+            <h3 class="followers__number">8239</h3>
+            <p class="followers__text">Subscribers</p>
+            <div class="ratio ratio--down">
+              <img src="src/images/icon-down.svg" alt="" srcset="" />
+              <span> 144 Today </span>
+            </div>
+          </div>
+        </section>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+        <section class="summary">
+          <h2 class="summary__title">Overview - Today</h2>
+          <div class="cards summary__cards">
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Page Views</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-facebook.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">87</h3>
+                <div class="ratio ratio--up">
+                  <img src="src/images/icon-up.svg" alt="" srcset="" />
+                  <span> 3% </span>
+                </div>
+              </div>
+            </div>
 
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Likes</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-facebook.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">52</h3>
+                <div class="ratio ratio--down">
+                  <img src="src/images/icon-down.svg" alt="" srcset="" />
+                  <span> 2% </span>
+                </div>
+              </div>
+            </div>
 
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Likes</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-instagram.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">5462</h3>
+                <div class="ratio ratio--up">
+                  <img src="src/images/icon-up.svg" alt="" srcset="" />
+                  <span> 2257% </span>
+                </div>
+              </div>
+            </div>
 
-  Overview - Today
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Profile Views</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-instagram.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">52k</h3>
+                <div class="ratio ratio--up">
+                  <img src="src/images/icon-up.svg" alt="" srcset="" />
+                  <span> 1375% </span>
+                </div>
+              </div>
+            </div>
 
-  Page Views
-  87
-  3%
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Retweets</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-twitter.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">117</h3>
+                <div class="ratio ratio--up">
+                  <img src="src/images/icon-up.svg" alt="" srcset="" />
+                  <span> 303% </span>
+                </div>
+              </div>
+            </div>
 
-  Likes
-  52
-  2%
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Likes</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-twitter.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">507</h3>
+                <div class="ratio ratio--up">
+                  <img src="src/images/icon-up.svg" alt="" srcset="" />
+                  <span> 553% </span>
+                </div>
+              </div>
+            </div>
 
-  Likes
-  5462
-  2257%
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Likes</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-youtube.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">107</h3>
+                <div class="ratio ratio--down">
+                  <img src="src/images/icon-down.svg" alt="" srcset="" />
+                  <span> 19% </span>
+                </div>
+              </div>
+            </div>
 
-  Profile Views
-  52k
-  1375%
+            <div class="cards__bg summary__card">
+              <div class="summary__content">
+                <span class="summary__text">Total Views</span>
+                <img
+                  class="summary__logo"
+                  src="src/images/icon-youtube.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div class="summary__content">
+                <h3 class="summary__number">1407</h3>
+                <div class="ratio ratio--down">
+                  <img src="src/images/icon-down.svg" alt="" srcset="" />
+                  <span> 12% </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <footer class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/lopepardo">Luis Felipe López</a>.
+        </footer>
+      </main>
+    </div>
+    <script src="src/js/app.js"></script>
+  </body>
 </html>

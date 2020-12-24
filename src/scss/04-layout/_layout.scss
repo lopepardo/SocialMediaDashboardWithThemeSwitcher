@@ -1,0 +1,27 @@
+.l-grid {
+  display: grid;
+  grid-template-columns: var(--width-layout) 1fr var(--width-layout);
+
+  @include media(0, $max-sm) {
+    --width-layout: 1.6rem;
+  }
+  @include media($min-md, $max-md) {
+    --width-layout: 6rem;
+  }
+  @include media($min-lg) {
+    --width-layout: 1120px;
+    grid-template-columns: 1fr var(--width-layout) 1fr;
+  }
+}
+
+.l-limit {
+  grid-column: 2 / span 1;
+}
+
+.l-full {
+  grid-column: span 3;
+}
+
+.l-content {
+  margin: 0 var(--width-layout);
+}

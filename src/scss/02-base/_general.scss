@@ -1,0 +1,37 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  background-color: var(--background);
+
+  @include media($min-lg) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 230px;
+      width: 100%;
+      background-color: var(--top-background-pattern);
+      z-index: $z-back;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+span {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  color: var(--text-color-primary);
+}
+
+h2 {
+  font-size: $h2-font-size;
+  color: var(--text-color-primary);
+}
+
+h3 {
+  color: var(--text-color-primary);
+}

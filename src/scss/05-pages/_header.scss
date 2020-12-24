@@ -1,0 +1,36 @@
+.header {
+  margin: 2.2rem 0 2.6rem;
+
+  @include media($min-lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    @include media(0, $max-md) {
+      padding-bottom: 1.3rem;
+      margin-bottom: 1.1rem;
+      border-bottom: 0.12rem solid hsl(230, 22%, 74%);
+    }
+  }
+
+  &__text {
+    color: var(--text-color-secondary);
+  }
+
+  &__span {
+    color: hsl(230, 22%, 74%);
+    @include media($min-lg) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    @include media(0, $max-md) {
+      justify-content: space-between;
+    }
+  }
+}

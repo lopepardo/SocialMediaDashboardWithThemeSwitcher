@@ -1,0 +1,50 @@
+.toggle {
+  display: inline-block;
+  &__input {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  &__label {
+    width: 52px;
+    height: 25px;
+    border-radius: 150px;
+    float: right;
+
+    background: var(--toggle);
+    text-indent: -9999px;
+    position: relative;
+
+    cursor: pointer;
+  }
+
+  &__label:hover {
+    background: linear-gradient(
+      120deg,
+      hsl(210, 78%, 56%) 0%,
+      hsl(146, 68%, 55%) 100%
+    );
+  }
+
+  &__label:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    width: 18px;
+    height: 18px;
+    background: var(--top-background-pattern);
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  &__input:checked + &__label:after {
+    right: calc(100% - 5px);
+    transform: translateX(100%);
+  }
+
+  &__label:active:after {
+    width: 45px;
+  }
+}
