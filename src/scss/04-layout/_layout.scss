@@ -8,8 +8,12 @@
   @include media($min-md, $max-md) {
     --width-layout: 6rem;
   }
-  @include media($min-lg) {
-    --width-layout: 1120px;
+  @include media($min-lg, $max-lg) {
+    --width-layout: 980px;
+    grid-template-columns: 1fr var(--width-layout) 1fr;
+  }
+  @include media($hg) {
+    --width-layout: 1100px;
     grid-template-columns: 1fr var(--width-layout) 1fr;
   }
 }
